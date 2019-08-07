@@ -21,7 +21,7 @@ if (process.env.NODE_ENV === "production") {
 
 mongoose.set("useNewUrlParser", true);
 mongoose.set("useFindAndModify", false);
-mongoose.connect(process.env.MONGODB_URI || "mongodb://hoptoit:project3@ds259787.mlab.com:59787/heroku_8xswmk79");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://won518:mango1234@ds359847.mlab.com:59847/heroku_13gpnwnd");
 
 // mongoose.Promise = global.Promise;
 // if (process.env.NODE_ENV === 'test') {
