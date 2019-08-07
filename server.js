@@ -10,6 +10,9 @@ var cookieParser = require("cookie-parser");
 const PORT = process.env.PORT || 5000;
 const app = express();
 
+
+
+
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
@@ -42,6 +45,8 @@ app.use(bodyParser.json());
 // app.use('/users', require('./routes/users'));
 app.use(routes);
 // console.log(process.env);
+
+console.log("THIS IS PORT: ", PORT) 
 
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
