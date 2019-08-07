@@ -34,10 +34,10 @@ mongoose.connect(process.env.MONGODB_URI || "mongodb://won518:mango1234@ds359847
 // }
 
 app.use(cookieParser());
-app.use(cors({
-  origin: 'http://localhost:3000',
-  credentials: true
-}));
+// app.use(cors({
+//   origin: 'http://localhost:3000',
+//   credentials: true
+// }));
 
 app.use(bodyParser.json());
 
