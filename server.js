@@ -16,7 +16,6 @@ const app = express();
 // Define middleware here
 app.use(express.urlencoded({ extended: true }));
 app.use(express.json());
-
 // Serve up static assets (usually on heroku)
 if (process.env.NODE_ENV === "production") {
   app.use(express.static("client/build"));
@@ -24,7 +23,7 @@ if (process.env.NODE_ENV === "production") {
 
 mongoose.set("useNewUrlParser", true);
 mongoose.set("useFindAndModify", false);
-mongoose.connect(process.env.MONGODB_URI || "mongodb://won518:mango1234@ds359847.mlab.com:59847/heroku_13gpnwnd");
+mongoose.connect(process.env.MONGODB_URI || "mongodb://localhost/hoptoitdb");
 
 // mongoose.Promise = global.Promise;
 // if (process.env.NODE_ENV === 'test') {
@@ -45,9 +44,6 @@ app.use(bodyParser.json());
 // app.use('/users', require('./routes/users'));
 app.use(routes);
 // console.log(process.env);
-
-console.log("THIS IS PORT: ", PORT) 
-
 app.listen(PORT, () => {
   console.log(`🌎 ==> API server now on port ${PORT}!`);
 });
